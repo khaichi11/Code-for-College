@@ -548,8 +548,8 @@ class FishFeederSimulator:
         self.screen.blit(self.title_font.render("SYSTEM STATUS", True, DARK_GRAY), (panel_x + 20, panel_y + 10))
         pygame.draw.line(self.screen, DARK_GRAY, (panel_x + 20, panel_y + 50), (panel_x + panel_w - 20, panel_y + 50), 2)
         col1_x = panel_x + 30; col2_x = panel_x + panel_w // 2 + 20
-        status_texts_col1 = [ f"SYSTEM: {'ACTIVE' if self.system_active else 'INACTIVE'}", "", f"FEEDING: {'IN PROGRESS' if self.motor.is_feeding else 'IDLE'}", "", f"MOTOR ANGLE: {self.motor.current_angle:.1f}°", f"TARGET ANGLE: {self.motor.target_angle:.1f}°", f"MOTOR RPM: {self.motor.get_rpm():.1f}", ]
-        status_texts_col2 = [ f"VOLTAGE: {self.motor.voltage:.2f}V", f"CURRENT: {self.motor.current:.3f}A", "", "", f"FEED LEVEL: {self.feed_level:.0f}%", f"SESSIONS: {self.feeding_system.feed_sessions}", f"TOTAL DISP.: {self.feeding_system.total_feed_dispensed*1000:.1f}ml",]
+        status_texts_col1 = [ f"SYSTEM: {'ACTIVE' if self.system_active else 'INACTIVE'}", "", f"PEMBERIAN PAKAN: {'PROSES' if self.motor.is_feeding else 'IDLE'}", "", f"SUDUT MOTOR : {self.motor.current_angle:.1f}°", f"TARGET SUDUT: {self.motor.target_angle:.1f}°", f"MOTOR RPM: {self.motor.get_rpm():.1f}", ]
+        status_texts_col2 = [ f"TEGANGAN: {self.motor.voltage:.2f}V", f"ARUS: {self.motor.current:.3f}A", "", "", f"SISA PAKAN: {self.feed_level:.0f}%", f"SESSIONS: {self.feeding_system.feed_sessions}", f"TOTAL DISP.: {self.feeding_system.total_feed_dispensed*1000:.1f}ml",]
         start_y = panel_y + 65; line_height = 30
         for i, text in enumerate(status_texts_col1):
             color = DARK_GRAY
