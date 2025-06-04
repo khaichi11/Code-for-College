@@ -1,5 +1,4 @@
-# Nama : Khairuramdhani
-# NIM  : 235150300111035
+
 
 
 # Import Library
