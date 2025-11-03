@@ -1,5 +1,3 @@
-# Nama : Khairuramdhani
-# NIM  : 235150300111035
 
 import time
 import multiprocessing as mp
